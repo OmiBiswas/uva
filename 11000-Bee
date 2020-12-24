@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    long long int n,f,m,arr[104],R;
+    while(scanf("%lld",&n)==1)
+    {
+        if(n==-1)
+            break;
+        f=1;m=1;
+        int i;
+        for(i=0;i<=n;i++)
+        {
+            R=f+m;
+            arr[i]=R-1;
+            f=m;
+            m=R;
+        }
+        printf("%lld %lld\n",arr[n-1],arr[n]);
+    }
+    return 0;
+}
