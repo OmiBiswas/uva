@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    long int array[100],n,i,j,temp;
+    while(scanf("%ld",&n)==1)
+    {
+        if(n<0)
+            break;
+        for(i=0;;i++)
+        {
+           temp=n%3;
+           array[i]=temp;
+           n=n/3;
+           if(n==0)
+            break;
+           }
+           for(j=i;j>=0;j--)
+           {
+               printf("%ld",array[j]);
+           }
+           printf("\n");
+    }
+    return 0;
+}
